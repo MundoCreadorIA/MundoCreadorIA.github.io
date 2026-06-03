@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MundoCreadorIA - Experiencias con Inteligencia Artificial</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f4f7f6; color: #333; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f4f7f6; color: #333; display: flex; flex-direction: column; min-height: 100vh; }
         header { background: #fff; padding: 20px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
         .logo { font-size: 1.5rem; font-weight: bold; color: #2c3e50; text-decoration: none; }
         nav ul { margin: 0; padding: 0; list-style: none; display: flex; gap: 15px; }
@@ -14,7 +14,7 @@
         .ad-spot { background: #cedef0; color: #000000; text-align: center; font-weight: bold; border: 1px solid #b0c4de; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; }
         .top-leaderboard { width: 100%; max-width: 728px; height: 90px; margin: 20px auto; }
         
-        .main-container { display: flex; max-width: 1200px; margin: 0 auto; padding: 20px; gap: 20px; }
+        .main-container { display: flex; max-width: 1200px; margin: 0 auto; padding: 20px; gap: 20px; flex: 1; }
         .content { flex: 2; }
         .sidebar { flex: 1; display: flex; flex-direction: column; gap: 20px; }
 
@@ -27,7 +27,18 @@
         .sidebar-ad-skyscraper { width: 100%; max-width: 300px; height: 600px; background: #cedef0; border: 1px solid #b0c4de;}
         .in-content-ad { width: 100%; max-width: 336px; height: 280px; background: #c5b5a7; border: 1px solid #a89a8e; float: right; margin-left: 20px; margin-bottom: 10px;}
         
-        @media (max-width: 768px) { .main-container { flex-direction: column; } .in-content-ad { float: none; margin-left: 0; } }
+        /* NUEVOS ESTILOS PARA EL PIE DE PÁGINA */
+        footer { background-color: #2c3e50; color: #fff; padding: 40px 20px 20px 20px; margin-top: 40px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; }
+        .footer-section { flex: 1; min-width: 250px; }
+        .footer-section h3 { color: #3498db; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-top: 0; }
+        .footer-section ul { list-style: none; padding: 0; }
+        .footer-section ul li { margin-bottom: 10px; }
+        .footer-section ul li a { color: #ccc; text-decoration: none; }
+        .footer-section ul li a:hover { color: #fff; }
+        .footer-attribution { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #34495e; color: #7f8c8d; font-size: 0.9rem; }
+
+        @media (max-width: 768px) { .main-container { flex-direction: column; } .in-content-ad { float: none; margin-left: 0; } .footer-container { flex-direction: column; } }
     </style>
 </head>
 <body>
@@ -78,6 +89,42 @@
     </aside>
 
 </div>
+
+<!-- NUEVO PIE DE PÁGINA (FOOTER) -->
+<footer>
+    <div class="footer-container">
+        <!-- Sección 1 -->
+        <div class="footer-section">
+            <h3>MundoCreadorIA</h3>
+            <p>Tu rincón en internet para descubrir el potencial real de la Inteligencia Artificial a nivel cotidiano. Creamos, experimentamos y aprendemos sin tecnicismos.</p>
+        </div>
+        <!-- Sección 2 -->
+        <div class="footer-section">
+            <h3>Categorías</h3>
+            <ul>
+                <li><a href="#">Generación de Imágenes</a></li>
+                <li><a href="#">Productividad y Trabajo</a></li>
+                <li><a href="#">Creación de Contenido</a></li>
+                <li><a href="#">Herramientas Gratuitas</a></li>
+            </ul>
+        </div>
+        <!-- Sección 3 -->
+        <div class="footer-section">
+            <h3>Información y Legal</h3>
+            <ul>
+                <li><a href="#">Sobre Mí</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Aviso de Afiliados</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Atribución al final -->
+    <div class="footer-attribution">
+        <p>&copy; 2026 MundoCreadorIA. Creado con pasión por y para humanos.</p>
+    </div>
+</footer>
 
 </body>
 </html>
